@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Oddiy va chiroyli vazifalar ro'yxati (To-Do). HTML, CSS va JavaScript." />
+  <title>Vazifalar | Oddiy To-Do</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="app-header">
+      <h1>Vazifalarim</h1>
+      <p class="subtitle" id="today"></p>
+    </header>
+
+    <form class="add-form" id="add-form" autocomplete="off">
+      <input
+        type="text"
+        id="task-input"
+        class="task-input"
+        placeholder="Yangi vazifa yozing..."
+        maxlength="120"
+        aria-label="Yangi vazifa"
+      />
+      <button type="submit" class="btn-add" aria-label="Qo'shish">Qo'shish</button>
+    </form>
+
+    <div class="filters" role="tablist" aria-label="Filtrlash">
+      <button class="filter is-active" data-filter="all" role="tab">Barchasi</button>
+      <button class="filter" data-filter="active" role="tab">Bajarilmagan</button>
+      <button class="filter" data-filter="done" role="tab">Bajarilgan</button>
+    </div>
+
+    <ul class="task-list" id="task-list"></ul>
+
+    <p class="empty" id="empty" hidden>Hozircha vazifa yo'q. Yuqoridan qo'shing 👆</p>
+
+    <footer class="app-footer">
+      <span id="counter">0 ta vazifa</span>
+      <button class="btn-clear" id="clear-done">Bajarilganlarni tozalash</button>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
